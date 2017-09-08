@@ -5,7 +5,7 @@ ENV GLANCES_OPT -w
 RUN apk update && apk upgrade && apk add --no-cache --virtual build-dependencies py2-pip py2-psutil gcc musl-dev python-dev linux-headers
 
 RUN pip install --upgrade pip && \
-    pip install glances psutil netifaces glances bottle hddtemp docker py-cpuinfo
+    pip install glances psutil netifaces glances bottle hddtemp docker py-cpuinfo && apk del build-dependencies
 
 ADD glances.conf  /opt/glances/
 
