@@ -31,4 +31,6 @@ LABEL name=glances
 LABEL version=${GLANCES_VERSION}
 LABEL url=https://api.github.com/repos/nicolargo/glances/releases/latest
 
+USER ${USER}
+
 ENTRYPOINT python -m glances -C /opt/glances/glances.conf $GLANCES_OPT
