@@ -23,4 +23,4 @@ VOLUME /config/
 LABEL version=${GLANCES_VERSION}
 LABEL url=https://api.github.com/repos/nicolargo/glances/releases/latest
 
-ENTRYPOINT python3 -m glances -C /conf/glances_custom.conf -w
+ENTRYPOINT python3 -m glances -w
