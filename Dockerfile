@@ -2,7 +2,7 @@ FROM alpine:latest
 
 ENV GLANCES_VERSION 2.11.1
 
-RUN apk add --no-cache python3  && \
+RUN apk add --no-cache python3 tzdata && \
     apk update && apk upgrade && apk add --no-cache --virtual build-dependencies gcc musl-dev python3-dev linux-headers && \
     pip3 install glances==${GLANCES_VERSION} \
                 psutil \
