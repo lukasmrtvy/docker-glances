@@ -21,6 +21,6 @@ EXPOSE 61208
 VOLUME /config/
 
 LABEL version=${GLANCES_VERSION}
-LABEL url=https://api.github.com/repos/nicolargo/glances/releases/latest
+LABEL url=https://github.com/nicolargo/glances/
 
 ENTRYPOINT python3 -m glances -w
